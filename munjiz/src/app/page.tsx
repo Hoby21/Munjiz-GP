@@ -1,19 +1,19 @@
 // import Hero from "./components/Hero"
 // import Statistics from "./components/Statistics"
-// import News from "./components/News"
+import Services from "./components/Services"
 // import Partners from "./components/Partners"
-import Support from "./pages/support"
+// import Support from "./pages/support"
 // import Login from "./pages/login"
 
 export default function Home() {
   return (
     <>
       {/* <Login /> */}
-      <Support />
-      {/* <Hero />
-      <Statistics />
-      <News />
-      <Partners /> */}
+      {/* <Support /> */}
+      {/* <Hero /> */}
+      {/* <Statistics /> */}
+      <Services />
+      {/* <Partners /> */}
     </>
   )
 }
