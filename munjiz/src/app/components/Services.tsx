@@ -5,6 +5,7 @@ import { IoTicketOutline } from "react-icons/io5";
 import { GrHostMaintenance } from "react-icons/gr";
 import { FiKey } from "react-icons/fi";
 import { LiaFileContractSolid } from "react-icons/lia";
+import { GiProgression } from "react-icons/gi";
 // import Image from "next/image"
 
 // Define the service type
@@ -22,56 +23,56 @@ const services: Service[] = [
     title: "Watheq",
     description:
       "Secure inter-organizational communication channel within MOD.",
-    imageUrl: <FaRegComments style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
+    imageUrl: <FaRegComments style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)" }} />,
   },
   {
     id: 2,
     title: "Meethaq",
     description:
       "Management of all departments active and passive inter and outer contracts.",
-    imageUrl: <LiaFileContractSolid style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
+    imageUrl: <LiaFileContractSolid style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 3,
     title: "Jiser",
     description:
       "Cross department project management and tracking.",
-    imageUrl: <TbBuildingBridge2 style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
+    imageUrl: <TbBuildingBridge2 style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 4,
     title: "Khadoom",
     description:
       "Ticketing system for the IT department assistance.",
-    imageUrl: <IoTicketOutline style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
+    imageUrl: <IoTicketOutline style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 5,
     title: "Sanad",
     description:
       "Maintenance management service designed to streamline and automate maintenance scheduling for all devices and equipment within an organization.",
-    imageUrl: <GrHostMaintenance style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
+    imageUrl: <GrHostMaintenance style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 6,
     title: "Taqeem",
     description:
       "Records team progress and evaluations by Team Leads.",
-    imageUrl: <FaRegComments style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
+    imageUrl: <GiProgression style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 7,
     title: "Wusool",
     description:
       "Visitor access management within the organization.",
-    imageUrl: <FiKey style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
+    imageUrl: <FiKey style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 8,
     title: "Mawared",
     description:
       "Resource requirement (request) and allocation management (budget, office spaces, vehicles).",
-    imageUrl: <FiPackage style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
+    imageUrl: <FiPackage style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
   },
 ]
 
@@ -93,7 +94,8 @@ export default function Services() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <button className="bg-green-600 text-white px-6 py-2 rounded-md">Read More</button>
+                
+                <button className="bg-green-600 text-white px-6 py-2 rounded-md">Select</button>
               </div>
             </div>
           ))}
