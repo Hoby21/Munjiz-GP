@@ -6,7 +6,6 @@ import {
   ChevronDown,
   Home,
   HelpCircle,
-  Info,
   Settings,
 } from "lucide-react"
 import { Logo } from "./icons/Logo"
@@ -17,7 +16,6 @@ export default function Sidebar() {
   const menuItems = [
     { id: "home", label: "Home", icon: Home, hasDropdown: false },
     { id: "support", label: "Support", icon: HelpCircle, hasDropdown: false },
-    { id: "about", label: "About", icon: Info, hasDropdown: false },
     { id: "updates", label: "Settings", icon: Settings, hasDropdown: true },
   ]
 
