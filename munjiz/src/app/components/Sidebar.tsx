@@ -3,48 +3,64 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronDown, Home, Settings, HelpCircle,Info} from "lucide-react"
+import {
+  ChevronDown,
+  Home,
+  HelpCircle,
+  Info,
+  Settings,
+} from "lucide-react"
 
 export default function Sidebar() {
   const [expandedItem, setExpandedItem] = useState<string | null>(null)
 
   const menuItems = [
-    { id: "home", label: "Home", icon: Home },
-    { id: "design", label: "Settings", icon: Settings },
-    { id: "support", label: "Support", icon: HelpCircle },
-    { id: "about", label: "About", icon: Info },
+    { id: "home", label: "Home", icon: Home, hasDropdown: false },
+    { id: "support", label: "Support", icon: HelpCircle, hasDropdown: false },
+    { id: "about", label: "About", icon: Info, hasDropdown: false },
+    { id: "updates", label: "Settings", icon: Settings, hasDropdown: true },
   ]
 
   return (
-    <div className="w-64 fixed left-0 top-0 h-screen bg-white border-l overflow-y-auto" dir="rtl">
+    <div className="w-64 fixed left-0 top-0 h-screen bg-white border-r overflow-y-auto">
       {/* Logo */}
-      <div className="p-4 border-b">
-        <Image src="/placeholder.svg" alt="Logo" width={120} height={40} className="mx-auto" />
+      <div className="p-4">
+        <Image src="/placeholder.svg" alt="Ministy of Defense" width={150} height={50} className="mx-auto" />
       </div>
 
       {/* Navigation */}
-      <nav className="p-4">
+      <nav className="px-2 py-4">
         {menuItems.map((item) => (
-          <div key={item.id} className="mb-2">
+          <div key={item.id} className="mb-1">
             <button
-              onClick={() => setExpandedItem(expandedItem === item.id ? null : item.id)}
-              className="w-full flex items-center justify-between p-2 rounded-md hover:bg-gray-50 text-gray-700"
+              onClick={() => item.hasDropdown && setExpandedItem(expandedItem === item.id ? null : item.id)}
+              className={`w-full flex items-center justify-between p-2 rounded-md hover:bg-gray-100 text-gray-700 ${
+                expandedItem === item.id ? "bg-gray-100" : ""
+              }`}
             >
               <div className="flex items-center">
-                <item.icon className="w-5 h-5 ml-2" />
-                <span>{item.label}</span>
+                <item.icon className="w-4 h-4 mr-3" />
+                <span className="text-sm">{item.label}</span>
               </div>
-              <ChevronDown
-                className={`w-4 h-4 transition-transform ${expandedItem === item.id ? "transform rotate-180" : ""}`}
-              />
+              {item.hasDropdown && (
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${expandedItem === item.id ? "transform rotate-180" : ""}`}
+                />
+              )}
             </button>
-            {expandedItem === item.id && (
-              <div className="pr-8 mt-2 space-y-2">
-                <Link href="#" className="block p-2 text-sm text-gray-600 hover:text-gray-800">
-                    side 1
+            {item.hasDropdown && expandedItem === item.id && (
+              <div className="ml-9 mt-1 space-y-1">
+                <Link
+                  href="#"
+                  className="block px-2 py-1.5 text-sm text-gray-600 hover:text-gray-800 rounded-md hover:bg-gray-50"
+                >
+                  Submenu Item 1
                 </Link>
-                <Link href="#" className="block p-2 text-sm text-gray-600 hover:text-gray-800">
-                    side 2
+                <Link
+                  href="#"
+                  className="block px-2 py-1.5 text-sm text-gray-600 hover:text-gray-800 rounded-md hover:bg-gray-50"
+                >
+                  Submenu Item 2
                 </Link>
               </div>
             )}
@@ -53,8 +69,8 @@ export default function Sidebar() {
       </nav>
 
       {/* Language Switcher */}
-      <div className="absolute bottom-0 right-0 left-0 p-4 border-t bg-white">
-        <button className="w-full text-center text-sm text-gray-600 hover:text-gray-800">Arabic</button>
+      <div className="absolute bottom-0 left-0 right-0 p-4 border-t bg-white">
+        <button className="px-3 py-1 text-sm border rounded-md hover:bg-gray-50">Arabic</button>
       </div>
     </div>
   )

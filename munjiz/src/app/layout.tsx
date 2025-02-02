@@ -1,14 +1,14 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
+import type React from "react"
 import Sidebar from "./components/Sidebar"
 import Footer from "./components/Footer"
-import type React from "react" // Added import for React
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Government Portal",
-  description: "Official Government Portal",
+  title: "Digital Government Authority",
+  description: "Digital Government Authority Documentation",
 }
 
 export default function RootLayout({
@@ -17,11 +17,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang="en">
       <body className={inter.className}>
         <div className="flex">
-          <main className="flex-1 pr-64">{children}</main>
           <Sidebar />
+          <main className="flex-1 pl-64">{children}</main>
         </div>
         <Footer />
       </body>
