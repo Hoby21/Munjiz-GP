@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import {
   ChevronDown,
@@ -10,6 +9,7 @@ import {
   Info,
   Settings,
 } from "lucide-react"
+import { Logo } from "./icons/Logo"
 
 export default function Sidebar() {
   const [expandedItem, setExpandedItem] = useState<string | null>(null)
@@ -25,7 +25,7 @@ export default function Sidebar() {
     <div className="w-64 fixed left-0 top-0 h-screen bg-white border-r overflow-y-auto">
       {/* Logo */}
       <div className="p-4">
-        <Image src="/placeholder.svg" alt="Ministy of Defense" width={150} height={50} className="mx-auto" />
+        <Logo />
       </div>
 
       {/* Navigation */}
