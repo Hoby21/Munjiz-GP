@@ -94,8 +94,9 @@ export default function Services() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                
-                <button className="bg-green-600 text-white px-6 py-2 rounded-md">Select</button>
+                <div className="flex justify-center">  
+                  <button className="bg-green-600 text-white px-6 py-2 rounded-md">Select</button>
+                </div>  
               </div>
             </div>
           ))}

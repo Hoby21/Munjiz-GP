@@ -2,8 +2,8 @@
 // import Statistics from "./components/Statistics"
 import Services from "./components/Services"
 // import Partners from "./components/Partners"
-// import Support from "./pages/support"
-// import Login from "./pages/login"
+import Support from "./pages/support"
+// import Login from "./login/login"
 
 export default function Home() {
   return (
