@@ -1,77 +1,77 @@
-import Image from "next/image"
+import { FaRegComments } from "react-icons/fa6";
+import { TbBuildingBridge2 } from "react-icons/tb";
+import { FiPackage } from "react-icons/fi";
+import { IoTicketOutline } from "react-icons/io5";
+import { GrHostMaintenance } from "react-icons/gr";
+import { FiKey } from "react-icons/fi";
+import { LiaFileContractSolid } from "react-icons/lia";
+// import Image from "next/image"
 
 // Define the service type
 type Service = {
   id: number
   title: string
   description: string
-  imageUrl: string
+  imageUrl: React.ReactNode
 }
 
 // Define the services data
 const services: Service[] = [
   {
     id: 1,
-    title: "Booking Service",
+    title: "Watheq",
     description:
-      "Schedule appointments and book services online. Our booking system allows you to easily reserve time slots and manage your appointments efficiently.",
-    imageUrl: "/placeholder.svg",
+      "Secure inter-organizational communication channel within MOD.",
+    imageUrl: <FaRegComments style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 2,
-    title: "Support Tickets",
+    title: "Meethaq",
     description:
-      "Get help when you need it through our support ticket system. Submit and track your support requests with our dedicated customer service team.",
-    imageUrl: "/placeholder.svg",
+      "Management of all departments active and passive inter and outer contracts.",
+    imageUrl: <LiaFileContractSolid style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 3,
-    title: "Document Services",
+    title: "Jiser",
     description:
-      "Access and manage your important documents securely. Upload, download, and share documents with proper authorization and tracking.",
-    imageUrl: "/placeholder.svg",
+      "Cross department project management and tracking.",
+    imageUrl: <TbBuildingBridge2 style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 4,
-    title: "Training Programs",
+    title: "Khadoom",
     description:
-      "Enhance your skills with our comprehensive training programs. Access online courses and certification programs designed for professional development.",
-    imageUrl: "/placeholder.svg",
+      "Ticketing system for the IT department assistance.",
+    imageUrl: <IoTicketOutline style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 5,
-    title: "Resource Management",
+    title: "Sanad",
     description:
-      "Efficiently manage and allocate resources across your organization. Track usage, availability, and schedule resources as needed.",
-    imageUrl: "/placeholder.svg",
+      "Maintenance management service designed to streamline and automate maintenance scheduling for all devices and equipment within an organization.",
+    imageUrl: <GrHostMaintenance style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 6,
-    title: "Reports & Analytics",
+    title: "Taqeem",
     description:
-      "Access detailed reports and analytics about your service usage. Get insights and make data-driven decisions with our reporting tools.",
-    imageUrl: "/placeholder.svg",
+      "Records team progress and evaluations by Team Leads.",
+    imageUrl: <FaRegComments style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 7,
-    title: "User Management",
+    title: "Wusool",
     description:
-      "Manage user accounts and access permissions. Add, remove, or modify user roles and privileges within your organization.",
-    imageUrl: "/placeholder.svg",
+      "Visitor access management within the organization.",
+    imageUrl: <FiKey style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
   },
   {
     id: 8,
-    title: "Notifications",
+    title: "Mawared",
     description:
-      "Stay informed with our notification system. Receive updates about your services, appointments, and important announcements.",
-    imageUrl: "/placeholder.svg",
-  },
-  {
-    id: 9,
-    title: "Payment Services",
-    description:
-      "Secure payment processing for all your transactions. Manage invoices, track payments, and access payment history easily.",
-    imageUrl: "/placeholder.svg",
+      "Resource requirement (request) and allocation management (budget, office spaces, vehicles).",
+    imageUrl: <FiPackage style={  { fontSize: '300px', marginLeft: '85px', color: "rgb(0,160,90)"  }} />,
   },
 ]
 
@@ -87,7 +87,8 @@ export default function Services() {
           {services.map((service) => (
             <div key={service.id} className="bg-white rounded-lg overflow-hidden shadow-sm">
               <div className="aspect-video relative">
-                <Image src={service.imageUrl || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
+                {service.imageUrl}
+                {/* <Image src={service.imageUrl || "/placeholder.svg"} alt={service.title} fill className="object-cover" /> */}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
