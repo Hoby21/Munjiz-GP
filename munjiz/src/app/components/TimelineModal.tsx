@@ -1,6 +1,6 @@
 "use client"
 
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import { Check } from "lucide-react"
 
 interface TimelineModalProps {
@@ -36,6 +36,7 @@ export function TimelineModal({ isOpen, onClose, visitorName }: TimelineModalPro
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md" dir="rtl">
+        <DialogTitle />
         <div className="space-y-6">
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-1">حالة الطلب</h3>
