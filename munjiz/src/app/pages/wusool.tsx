@@ -3,11 +3,11 @@ import VisitorTable from "../components/VisitorTable"
 
 export default function WusoolPage() {
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div className="min-h-screen bg-gray-50 p-8" dir="rtl">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">Wusool</h1>
-        <p className="text-gray-600">Visitor access management within the organization.</p>
+        <h1 className="text-3xl font-bold mb-2">وصول</h1>
+        <p className="text-gray-600">إدارة وصول الزوار داخل المنظمة</p>
       </div>
 
       {/* Action Bar */}
@@ -18,21 +18,21 @@ export default function WusoolPage() {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search visitors..."
-                className="pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                placeholder="البحث عن الزوار..."
+                className="pr-10 pl-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
-              <Search className="absolute left-3 top-2.5 text-gray-400" size={20} />
+              <Search className="absolute right-3 top-2.5 text-gray-400" size={20} />
             </div>
             {/* Filter Button */}
-            <button className="flex items-center px-4 py-2 border rounded-lg text-gray-600 hover:bg-gray-50">
-              <Filter className="w-5 h-5 mr-2" />
-              Filter
+            <button className="flex items-center px-4 py-2 border rounded-lg text-gray-600 hover:bg-gray-50 mr-4">
+              <Filter className="w-5 h-5 ml-2" />
+              تصفية
             </button>
           </div>
           {/* Add Visitor Button */}
           <button className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
-            <Plus className="w-5 h-5 mr-2" />
-            Add Visitor
+            <Plus className="w-5 h-5 ml-2" />
+            إضافة زائر
           </button>
         </div>
       </div>

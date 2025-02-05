@@ -18,20 +18,19 @@ export default function VisitorRegistration() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    console.log("تم إرسال النموذج:", formData)
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
+    <div className="min-h-screen bg-gray-50 p-8" dir="rtl">
       {/* Header */}
       <div className="mb-8">
         <Link href="/wusool" className="flex items-center text-gray-600 hover:text-gray-900 mb-4">
-          <ArrowLeft className="w-5 h-5 mr-2" />
-          Back to Wusool
+          <ArrowLeft className="w-5 h-5 ml-2" />
+          العودة إلى وصول
         </Link>
-        <h1 className="text-3xl font-bold mb-2">Register New Visitor</h1>
-        <p className="text-gray-600">Fill in the visitor details below.</p>
+        <h1 className="text-3xl font-bold mb-2">تسجيل زائر جديد</h1>
+        <p className="text-gray-600">يرجى ملء بيانات الزائر أدناه</p>
       </div>
 
       {/* Registration Form */}
@@ -40,7 +39,7 @@ export default function VisitorRegistration() {
           <div className="grid grid-cols-2 gap-6">
             <div>
               <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
-                First Name
+                الاسم الأول
               </label>
               <input
                 type="text"
@@ -53,7 +52,7 @@ export default function VisitorRegistration() {
             </div>
             <div>
               <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
-                Last Name
+                اسم العائلة
               </label>
               <input
                 type="text"
@@ -69,7 +68,7 @@ export default function VisitorRegistration() {
           <div className="grid grid-cols-2 gap-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email Address
+                البريد الإلكتروني
               </label>
               <input
                 type="email"
@@ -82,7 +81,7 @@ export default function VisitorRegistration() {
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                Phone Number
+                رقم الجوال
               </label>
               <input
                 type="tel"
@@ -97,7 +96,7 @@ export default function VisitorRegistration() {
 
           <div>
             <label htmlFor="purpose" className="block text-sm font-medium text-gray-700">
-              Purpose of Visit
+              الغرض من الزيارة
             </label>
             <textarea
               id="purpose"
@@ -111,7 +110,7 @@ export default function VisitorRegistration() {
 
           <div>
             <label htmlFor="host" className="block text-sm font-medium text-gray-700">
-              Host Name
+              اسم المضيف
             </label>
             <input
               type="text"
@@ -126,7 +125,7 @@ export default function VisitorRegistration() {
           <div className="grid grid-cols-2 gap-6">
             <div>
               <label htmlFor="visitDate" className="block text-sm font-medium text-gray-700">
-                Visit Date
+                تاريخ الزيارة
               </label>
               <input
                 type="date"
@@ -139,7 +138,7 @@ export default function VisitorRegistration() {
             </div>
             <div>
               <label htmlFor="visitTime" className="block text-sm font-medium text-gray-700">
-                Visit Time
+                وقت الزيارة
               </label>
               <input
                 type="time"
@@ -153,15 +152,15 @@ export default function VisitorRegistration() {
           </div>
 
           <div className="flex justify-end space-x-4">
-            <Link href="/wusool" className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
-              Cancel
-            </Link>
             <button
               type="submit"
-              className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ml-4"
             >
-              Register Visitor
+              تسجيل الزائر
             </button>
+            <Link href="/wusool" className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
+              إلغاء
+            </Link>
           </div>
         </form>
       </div>

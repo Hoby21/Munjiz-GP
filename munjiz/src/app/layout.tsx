@@ -17,12 +17,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <body className={inter.className}>
         <div className="flex">
           {/* Conditionally render the Sidebar */}
           {!isLoginPage() && <Sidebar />}
-          <main className={`flex-1 ${!isLoginPage() ? "pl-64" : ""}`}>{children}</main>
+          <main className={`flex-1 ${!isLoginPage() ? "pl-0 pr-64" : ""}`}>{children}</main>
         </div>
         <Footer />
       </body>

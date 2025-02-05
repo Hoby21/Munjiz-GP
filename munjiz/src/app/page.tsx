@@ -4,7 +4,7 @@
 // import Partners from "./components/Partners"
 // import Support from "./pages/support"
 // import Login from "./login/login"
-// import Wusool from "./pages/wusool"
+import Wusool from "./pages/wusool"
 import Registrationform from "./pages/registrationform"
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       {/* <Statistics /> */}
       {/* <Services /> */}
       {/* <Partners /> */}
-      {/* <Wusool /> */}
+      <Wusool />
       <Registrationform />
     </>
   )

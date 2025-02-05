@@ -9,35 +9,34 @@ type Visitor = {
   purpose: string
   host: string
   date: string
-  status: "Approved" | "Pending" | "Rejected"
+  status: "مقبول" | "قيد الانتظار" | "مرفوض"
 }
 
 const visitors: Visitor[] = [
   {
     id: "1",
-    name: "Ahmed Mohammed",
-    purpose: "Business Meeting",
-    host: "Sarah Johnson",
+    name: "أحمد محمد",
+    purpose: "اجتماع عمل",
+    host: "سارة الجابري",
     date: "2024-02-05",
-    status: "Approved",
+    status: "مقبول",
   },
   {
     id: "2",
-    name: "John Smith",
-    purpose: "Interview",
-    host: "Mohammed Ali",
+    name: "عبدالله العمري",
+    purpose: "مقابلة",
+    host: "محمد علي",
     date: "2024-02-05",
-    status: "Pending",
+    status: "قيد الانتظار",
   },
   {
     id: "3",
-    name: "Lisa Anderson",
-    purpose: "Maintenance",
-    host: "Ahmed Hassan",
+    name: "ليلى أحمد",
+    purpose: "صيانة",
+    host: "أحمد حسن",
     date: "2024-02-05",
-    status: "Rejected",
+    status: "مرفوض",
   },
-  // Add more visitors as needed
 ]
 
 export default function VisitorTable() {
@@ -51,11 +50,11 @@ export default function VisitorTable() {
 
   const getStatusColor = (status: Visitor["status"]) => {
     switch (status) {
-      case "Approved":
+      case "مقبول":
         return "bg-green-100 text-green-800"
-      case "Pending":
+      case "قيد الانتظار":
         return "bg-yellow-100 text-yellow-800"
-      case "Rejected":
+      case "مرفوض":
         return "bg-red-100 text-red-800"
       default:
         return "bg-gray-100 text-gray-800"
@@ -63,11 +62,11 @@ export default function VisitorTable() {
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto" dir="rtl">
       <table className="w-full">
         <thead className="bg-gray-50 border-b">
           <tr>
-            <th className="px-6 py-4 text-left">
+            <th className="px-6 py-4 text-right">
               <input
                 type="checkbox"
                 className="rounded border-gray-300 text-green-600 focus:ring-green-500"
@@ -78,12 +77,12 @@ export default function VisitorTable() {
                 checked={selectedVisitors.length === visitors.length}
               />
             </th>
-            <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Visitor Name</th>
-            <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Purpose</th>
-            <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Host</th>
-            <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Date</th>
-            <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Status</th>
-            <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Actions</th>
+            <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">اسم الزائر</th>
+            <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">الغرض من الزيارة</th>
+            <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">المضيف</th>
+            <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">التاريخ</th>
+            <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">الحالة</th>
+            <th className="px-6 py-4 text-right text-sm font-semibold text-gray-900">الإجراءات</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-gray-200">
