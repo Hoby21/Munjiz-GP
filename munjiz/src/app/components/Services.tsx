@@ -1,108 +1,148 @@
-import { FaRegComments } from "react-icons/fa6";
-import { TbBuildingBridge2 } from "react-icons/tb";
-import { FiPackage } from "react-icons/fi";
-import { IoTicketOutline } from "react-icons/io5";
-import { GrHostMaintenance } from "react-icons/gr";
-import { FiKey } from "react-icons/fi";
-import { LiaFileContractSolid } from "react-icons/lia";
-import { GiProgression } from "react-icons/gi";
-// import Image from "next/image"
+"use client"
+import { FaRegComments } from "react-icons/fa6"
+import { TbBuildingBridge2 } from "react-icons/tb"
+import { FiPackage, FiKey } from "react-icons/fi"
+import { IoTicketOutline } from "react-icons/io5"
+import { GrHostMaintenance } from "react-icons/gr"
+import { LiaFileContractSolid } from "react-icons/lia"
+import { GiProgression } from "react-icons/gi"
+import { useRouter } from "next/navigation"
+import type React from "react"
 
-// Define the service type
 type Service = {
   id: number
   title: string
   description: string
-  imageUrl: React.ReactNode
+  icon: React.ReactNode
+  link: string
 }
 
-// Define the services data
 const services: Service[] = [
   {
     id: 1,
-    title: "Watheq",
-    description:
-      "Secure inter-organizational communication channel within MOD.",
-    imageUrl: <FaRegComments style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)" }} />,
+    title: "واثق",
+    description: "تواصل آمن بين المؤسسات داخل وزارة الدفاع",
+    icon: <FaRegComments />,
+    link: "/Watheeq",
   },
   {
     id: 2,
-    title: "Meethaq",
-    description:
-      "Management of all departments active and passive inter and outer contracts.",
-    imageUrl: <LiaFileContractSolid style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
+    title: "ميثاق",
+    description: "إدارة العقود النشطة والسابقة عبر الإدارات",
+    icon: <LiaFileContractSolid />,
+    link: "/meethaq",
   },
   {
     id: 3,
-    title: "Jiser",
-    description:
-      "Cross department project management and tracking.",
-    imageUrl: <TbBuildingBridge2 style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
+    title: "جسر",
+    description: "إدارة وتتبع المشاريع عبر الإدارات",
+    icon: <TbBuildingBridge2 />,
+    link: "/jiser",
   },
   {
     id: 4,
-    title: "Khadoom",
-    description:
-      "Ticketing system for the IT department assistance.",
-    imageUrl: <IoTicketOutline style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
+    title: "خدوم",
+    description: "نظام تذاكر تقنية المعلومات للمساعدة",
+    icon: <IoTicketOutline />,
+    link: "/khadoom",
   },
   {
     id: 5,
-    title: "Sanad",
-    description:
-      "Maintenance management service designed to streamline and automate maintenance scheduling for all devices and equipment within an organization.",
-    imageUrl: <GrHostMaintenance style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
+    title: "سند",
+    description: "جدولة وتتبع الصيانة الآلية",
+    icon: <GrHostMaintenance />,
+    link: "/sanad",
   },
   {
     id: 6,
-    title: "Taqeem",
-    description:
-      "Records team progress and evaluations by Team Leads.",
-    imageUrl: <GiProgression style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
+    title: "تقييم",
+    description: "تتبع تقدم الفريق والتقييمات من قبل القادة",
+    icon: <GiProgression />,
+    link: "/taqeem",
   },
   {
     id: 7,
-    title: "Wusool",
-    description:
-      "Visitor access management within the organization.",
-    imageUrl: <FiKey style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
+    title: "وصول",
+    description: "إدارة وصول الزوار للمؤسسة",
+    icon: <FiKey />,
+    link: "/wusool",
   },
   {
     id: 8,
-    title: "Mawared",
-    description:
-      "Resource requirement (request) and allocation management (budget, office spaces, vehicles).",
-    imageUrl: <FiPackage style={  { fontSize: '200px', margin: '0 auto', paddingTop: "70px", color: "rgb(0,160,90)"  }} />,
+    title: "موارد",
+    description: "إدارة تخصيص الموارد (الميزانية، المساحات، المركبات)",
+    icon: <FiPackage />,
+    link: "/mawared",
   },
 ]
 
 export default function Services() {
+  const router = useRouter()
+
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center mb-8">
-          <h2 className="text-3xl font-bold">Services</h2>
+    <section className="py-24 bg-gradient-to-b from-gray-50 to-white flex w-full min-h-screen">
+      {/* Main Content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex-1">
+        {/* Title */}
+        <div className="mb-16 text-center">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">خدماتنا</h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            اكتشف مجموعة حلولنا المبتكرة المصممة لتبسيط عملياتك
+          </p>
         </div>
-        <p className="text-left mb-12">Here you can select the available services.</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service) => (
-            <div key={service.id} className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="aspect-video relative">
-                {service.imageUrl}
-                {/* <Image src={service.imageUrl || "/placeholder.svg"} alt={service.title} fill className="object-cover" /> */}
+            <div
+              key={service.id}
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl border border-gray-200 transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center justify-between p-6 overflow-hidden cursor-pointer h-[350px] min-h-[350px]"
+              onClick={() => router.push(service.link)}
+            >
+              <div className="w-full text-center">
+                {/* Icon */}
+                <div className="text-primary text-6xl mb-4 transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  {service.icon}
+                </div>
+                {/* Title */}
+                <h2 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h2>
+                {/* Description */}
+                <p className="text-gray-600 text-sm">{service.description}</p>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="flex justify-center">  
-                  <button className="bg-green-600 text-white px-6 py-2 rounded-md">Select</button>
-                </div>  
+              {/* Learn More */}
+              <div className="mt-6 w-full text-right">
+                <span className="text-primary font-semibold inline-flex items-center group-hover:underline">
+                  المزيد
+                  <svg
+                    className="w-4 h-4 mr-2 transform rotate-180 transition-transform duration-300 group-hover:-translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Sidebar */}
+      <div className="w-64 bg-gray-100 p-6 rounded-lg shadow-lg ml-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">التفاصيل</h2>
+        <ul className="space-y-4">
+          <li className="text-gray-700">خدمة 1: واثق</li>
+          <li className="text-gray-700">خدمة 2: ميثاق</li>
+          <li className="text-gray-700">خدمة 3: جسر</li>
+          <li className="text-gray-700">خدمة 4: خدوم</li>
+          <li className="text-gray-700">خدمة 5: سند</li>
+          <li className="text-gray-700">خدمة 6: تقييم</li>
+          <li className="text-gray-700">خدمة 7: وصول</li>
+          <li className="text-gray-700">خدمة 8: موارد</li>
+        </ul>
+      </div>
     </section>
   )
 }
-

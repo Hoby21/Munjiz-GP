@@ -20,7 +20,7 @@ export default function Sidebar() {
   ]
 
   return (
-    <div className="w-64 fixed right-0 top-0 h-screen bg-white border-l overflow-y-auto" dir="rtl">
+    <div className="w-80 fixed right-0 top-0 h-screen bg-white border-l overflow-y-auto" dir="rtl">
       {/* Logo */}
       <div className="p-4">
         <Logo />
@@ -73,4 +73,3 @@ export default function Sidebar() {
     </div>
   )
 }
-
