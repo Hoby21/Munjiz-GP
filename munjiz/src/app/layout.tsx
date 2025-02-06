@@ -19,10 +19,15 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={inter.className}>
-        <div className="flex">
+        <div className="flex w-full">
           {/* Conditionally render the Sidebar */}
           {!isLoginPage() && <Sidebar />}
-          <main className={`flex-1 ${!isLoginPage() ? "pl-0 pr-64" : ""}`}>{children}</main>
+          <main
+            className={`flex-1 ${!isLoginPage() ? "pl-90" : "pl-0"}`}
+            style={{ width: "100%" }}
+          >
+            {children}
+          </main>
         </div>
         <Footer />
       </body>
@@ -34,4 +39,3 @@ export default function RootLayout({
 function isLoginPage() {
   return typeof window !== "undefined" && window.location.pathname === "/login"
 }
-
