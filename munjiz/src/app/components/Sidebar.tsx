@@ -14,13 +14,13 @@ export default function Sidebar() {
   const [expandedItem, setExpandedItem] = useState<string | null>(null)
 
   const menuItems = [
-    { id: "home", label: "Home", icon: Home, hasDropdown: false },
-    { id: "support", label: "Support", icon: HelpCircle, hasDropdown: false },
-    { id: "updates", label: "Settings", icon: Settings, hasDropdown: true },
+    { id: "home", label: "الرئيسية", icon: Home, hasDropdown: false },
+    { id: "support", label: "الدعم", icon: HelpCircle, hasDropdown: false },
+    { id: "updates", label: "الاعدادات", icon: Settings, hasDropdown: true },
   ]
 
   return (
-    <div className="w-64 fixed left-0 top-0 h-screen bg-white border-r overflow-y-auto">
+    <div className="w-64 fixed right-0 top-0 h-screen bg-white border-l overflow-y-auto" dir="rtl">
       {/* Logo */}
       <div className="p-4">
         <Logo />
@@ -37,7 +37,7 @@ export default function Sidebar() {
               }`}
             >
               <div className="flex items-center">
-                <item.icon className="w-4 h-4 mr-3" />
+                <item.icon className="w-4 h-4 ml-3" />
                 <span className="text-sm">{item.label}</span>
               </div>
               {item.hasDropdown && (
@@ -47,18 +47,18 @@ export default function Sidebar() {
               )}
             </button>
             {item.hasDropdown && expandedItem === item.id && (
-              <div className="ml-9 mt-1 space-y-1">
+              <div className="mr-9 mt-1 space-y-1">
                 <Link
                   href="#"
                   className="block px-2 py-1.5 text-sm text-gray-600 hover:text-gray-800 rounded-md hover:bg-gray-50"
                 >
-                  Submenu Item 1
+                  عنصر فرعي 1
                 </Link>
                 <Link
                   href="#"
                   className="block px-2 py-1.5 text-sm text-gray-600 hover:text-gray-800 rounded-md hover:bg-gray-50"
                 >
-                  Submenu Item 2
+                  عنصر فرعي 2
                 </Link>
               </div>
             )}
@@ -68,7 +68,7 @@ export default function Sidebar() {
 
       {/* Language Switcher */}
       <div className="absolute bottom-0 left-0 right-0 p-4 border-t bg-white">
-        <button className="px-3 py-1 text-sm border rounded-md hover:bg-gray-50">Arabic</button>
+        <button className="px-3 py-1 text-sm border rounded-md hover:bg-gray-50">English</button>
       </div>
     </div>
   )
