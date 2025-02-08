@@ -36,14 +36,14 @@ const services = [
     title: "خدوم",
     description: " نظام لحل الأعطال التقنية",
     icon: <IoTicketOutline className="text-green-500 text-6xl mb-4 color: 'green'" />,
-    link: "/khadoom",
+    link: "/Khadoom",
   },
   {
     id: 5,
     title: "سند",
     description: "جدولة وتتبع الصيانة",
     icon: <GrHostMaintenance className="text-green-500 text-6xl mb-4" />,
-    link: "/sanad",
+    link: "/Sanad",
   },
   {
     id: 6,
