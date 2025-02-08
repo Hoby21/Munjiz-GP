@@ -45,7 +45,7 @@ function getFiles() {
 }
 export default function Watheeq() {
     return (
-        <div className="m-4">
+        <div className="m-4 pr-80">
             <table className="w-full border-collapse">
                 <thead className="bg-gray-200 text-right">
                     <tr className="border-b">

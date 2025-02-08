@@ -3,7 +3,8 @@ import VisitorTable from "../components/VisitorTable"
 
 export default function WusoolPage() {
   return (
-    <div className="min-h-screen bg-gray-50 p-8" dir="rtl">
+    
+    <div className="min-h-screen bg-gray-50 pr-80 w-full" dir="rtl">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">وصول</h1>
