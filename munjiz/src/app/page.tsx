@@ -7,11 +7,13 @@
 // import Wusool from "./pages/wusool"
 import Watheeq from "./components/Watheeq";
 import Registrationform from "./pages/registrationform";
+import Sanad from "./sanad/sanad";
+import App from "./sanad/sanad";
 
 export default function Home() {
     return (
         <>
-            <Watheeq />
+            {/* <Watheeq /> */}
             {/* <Login /> */}
             {/* <Support /> */}
             {/* <Hero /> */}
@@ -19,7 +21,8 @@ export default function Home() {
             {/* <Services /> */}
             {/* <Partners /> */}
             {/* <Wusool /> */}
-            <Registrationform />
+            {/* <Registrationform /> */}
+            <Sanad/>
         </>
     );
 }
