@@ -21,7 +21,7 @@ const sampleRequests: MaintenanceRequest[] = [
     description: 'مكيف لا يعمل',
     details: {
       brand: 'LG',
-      size: '2',
+      size: '24,000',
       type: 'Split'
     },
     statusHistory: [
@@ -71,7 +71,7 @@ const sampleRequests: MaintenanceRequest[] = [
   }
 ];
 
-export default function Sanad() {
+function App() {
   const [showNewRequest, setShowNewRequest] = useState(false);
   const [requests, setRequests] = useState<MaintenanceRequest[]>(sampleRequests);
 
@@ -96,7 +96,7 @@ export default function Sanad() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-2">
@@ -118,8 +118,8 @@ export default function Sanad() {
               <FilterSection />
             </div>
 
-            <div className="bg-white rounded-lg shadow">
-              <h2 className="text-xl font-semibold p-4 border-b">سجل الطلبات</h2>
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <h2 className="text-xl font-semibold p-4 border-b border-gray-200">سجل الطلبات</h2>
               <MaintenanceTable 
                 requests={requests}
                 onCancel={handleCancelRequest}
@@ -127,7 +127,7 @@ export default function Sanad() {
             </div>
           </>
         ) : (
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <NewRequestForm
               onSubmit={handleNewRequest}
               onCancel={() => setShowNewRequest(false)}
@@ -138,3 +138,5 @@ export default function Sanad() {
     </div>
   );
 }
+
+export default App;

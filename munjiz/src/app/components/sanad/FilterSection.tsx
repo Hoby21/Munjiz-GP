@@ -1,11 +1,20 @@
-import React from 'react';
-import { FilterOptions } from '@/app/types/sanad';
+"use client"
+
+import { useState } from "react"
 
 export function FilterSection() {
+  const [filters, setFilters] = useState({
+    equipmentType: '',
+    status: '',
+    location: ''
+  });
+
   return (
     <div className="flex items-center gap-4">
       <select
-        className="rounded-lg border-gray-300 text-gray-700"
+        value={filters.equipmentType}
+        onChange={(e) => setFilters({ ...filters, equipmentType: e.target.value })}
+        className="rounded-lg border border-gray-200 text-gray-700 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2D4B4D] focus:border-transparent"
       >
         <option value="">كل أنواع المعدات</option>
         <option value="AC">مكيف هواء</option>
@@ -17,7 +26,9 @@ export function FilterSection() {
       </select>
 
       <select
-        className="rounded-lg border-gray-300 text-gray-700"
+        value={filters.status}
+        onChange={(e) => setFilters({ ...filters, status: e.target.value })}
+        className="rounded-lg border border-gray-200 text-gray-700 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2D4B4D] focus:border-transparent"
       >
         <option value="">كل الحالات</option>
         <option value="Under Review">قيد المراجعة</option>
@@ -28,7 +39,9 @@ export function FilterSection() {
       <input
         type="text"
         placeholder="البحث حسب الموقع..."
-        className="rounded-lg border-gray-300"
+        value={filters.location}
+        onChange={(e) => setFilters({ ...filters, location: e.target.value })}
+        className="rounded-lg border border-gray-200 text-gray-700 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#2D4B4D] focus:border-transparent"
       />
     </div>
   );
