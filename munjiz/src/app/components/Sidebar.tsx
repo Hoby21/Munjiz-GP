@@ -14,9 +14,9 @@ export default function Sidebar() {
   const [expandedItem, setExpandedItem] = useState<string | null>(null)
 
   const menuItems = [
-    { id: "home", label: "الرئيسية", icon: Home, hasDropdown: false },
-    { id: "support", label: "الدعم", icon: HelpCircle, hasDropdown: false },
-    { id: "updates", label: "الاعدادات", icon: Settings, hasDropdown: true },
+    { id: "home", label: "الرئيسية", icon: Home, hasDropdown: false, link: "/" },
+    { id: "support", label: "الدعم", icon: HelpCircle, hasDropdown: false, link: "/support" },
+    { id: "updates", label: "الاعدادات", icon: Settings, hasDropdown: false, link: "/settings" },
   ]
 
   return (
@@ -38,7 +38,9 @@ export default function Sidebar() {
             >
               <div className="flex items-center">
                 <item.icon className="w-4 h-4 ml-3" />
+                <Link href={item.link}>
                 <span className="text-sm">{item.label}</span>
+                </Link>
               </div>
               {item.hasDropdown && (
                 <ChevronDown
