@@ -2,22 +2,16 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "~/components/ui/input"
-import { Label } from "~/components/ui/label"
-import { toast } from "~/components/ui/use-toast"
-import { Toaster } from "~/components/ui/toaster"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 export default function SettingsPage() {
   const [phoneNumber, setPhoneNumber] = useState("0501234567")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    toast({
-      title: "تم التحديث",
-      description: "تم تحديث رقم الهاتف بنجاح",
-    })
+    // Handle form submission
+    console.log("Form submitted:", phoneNumber)
   }
 
   return (
@@ -74,7 +68,6 @@ export default function SettingsPage() {
           </div>
         </form>
       </div>
-      <Toaster />
     </div>
   )
 }
