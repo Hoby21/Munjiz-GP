@@ -3,6 +3,7 @@ import { Mail, HelpCircle } from "lucide-react"
 
 export default function SupportPage() {
   return (
+    <div className="m-4 pr-80">
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 py-4">
@@ -45,6 +46,7 @@ export default function SupportPage() {
 
         </div>
       </div>
+    </div>
     </div>
   )
 }

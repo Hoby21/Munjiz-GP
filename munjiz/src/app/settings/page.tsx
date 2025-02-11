@@ -15,6 +15,7 @@ export default function SettingsPage() {
   }
 
   return (
+    <div className="m-4 pr-80">
     <div className="min-h-screen bg-gray-50 p-8" dir="rtl">
       {/* Header */}
       <div className="mb-8">
@@ -45,7 +46,7 @@ export default function SettingsPage() {
               className="bg-gray-50 text-gray-500"
               disabled
             />
-            <p className="text-sm text-gray-500 mt-1">للتواصل مع الدعم الفني لتغيير البريد الإلكتروني</p>
+            <p className="text-sm text-gray-500 mt-1">تواصل مع الدعم الفني لتغيير البريد الإلكتروني</p>
           </div>
 
           <div>
@@ -68,6 +69,7 @@ export default function SettingsPage() {
           </div>
         </form>
       </div>
+    </div>
     </div>
   )
 }
