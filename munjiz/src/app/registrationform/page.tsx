@@ -22,7 +22,7 @@ export default function VisitorRegistration() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-8" dir="rtl">
+    <div className="min-h-screen bg-gray-50 p-8 m-4 pr-80" dir="rtl">
       {/* Header */}
       <div className="mb-8">
         <Link href="/wusool" className="flex items-center text-gray-600 hover:text-gray-900 mb-4">

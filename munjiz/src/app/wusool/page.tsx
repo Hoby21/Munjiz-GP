@@ -1,5 +1,6 @@
 import { Search, Filter, Plus } from "lucide-react"
 import VisitorTable from "../components/VisitorTable"
+import Link from "next/link"
 
 export default function WusoolPage() {
   return (
@@ -31,10 +32,12 @@ export default function WusoolPage() {
             </button>
           </div>
           {/* Add Visitor Button */}
+          <Link href="/registrationform">
           <button className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">
             <Plus className="w-5 h-5 ml-2" />
             إضافة زائر
           </button>
+          </Link>
         </div>
       </div>
 
