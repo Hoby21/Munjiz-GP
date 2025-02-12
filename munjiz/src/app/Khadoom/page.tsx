@@ -83,7 +83,7 @@ export default function Khadoom() {
     <div className="flex flex-col h-screen bg-gray-100" dir="rtl">
       <div className="bg-white p-4 border-b shadow-sm flex justify-between items-center">
         <button
-          onClick={() => router.push("/")}
+          onClick={() => router.push("/services")}
           className="text-green-500 hover:text-blue-600 transition-colors duration-300"
         >
           <ArrowRight size={24} />

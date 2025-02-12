@@ -6,7 +6,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   const pathname = usePathname()
 
   // Define pages where Sidebar should be hidden
-  const hideSidebarRoutes = ["/login", "/Khadoom"]
+  const hideSidebarRoutes = ["/", "/Khadoom"]
 
   return (
     <div className="flex w-full">

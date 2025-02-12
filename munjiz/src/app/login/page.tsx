@@ -49,7 +49,7 @@ const LoginPage: React.FC = () => {
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full px-9 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               placeholder="Enter your password"
               required
             />
@@ -64,17 +64,19 @@ const LoginPage: React.FC = () => {
           </div>
 
           {/* Login Button */}
+          <Link href="/services">
           <button
             type="submit"
             className="w-full bg-green-600 text-white font-semibold py-2 mt-6 rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
           >
             Log in
           </button>
+          </Link>
         </form>
 
         {/* Forgot Password */}
         <Link href="/forgot-password" className="block mt-4 text-sm text-gray-500 hover:underline">
-          Forgot your password?
+          ?Forgot your password
         </Link>
       </div>
     </div>

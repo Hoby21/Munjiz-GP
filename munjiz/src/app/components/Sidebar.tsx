@@ -5,7 +5,7 @@ import Link from "next/link"
 import {
   ChevronDown,
   Home,
-  HelpCircle,
+  // HelpCircle,
   Settings,
 } from "lucide-react"
 import { Logo } from "./icons/Logo"
@@ -14,8 +14,8 @@ export default function Sidebar() {
   const [expandedItem, setExpandedItem] = useState<string | null>(null)
 
   const menuItems = [
-    { id: "home", label: "الرئيسية", icon: Home, hasDropdown: false, link: "/" },
-    { id: "support", label: "الدعم", icon: HelpCircle, hasDropdown: false, link: "/support" },
+    { id: "home", label: "الرئيسية", icon: Home, hasDropdown: false, link: "/services" },
+    // { id: "support", label: "الدعم", icon: HelpCircle, hasDropdown: false, link: "/support" },
     { id: "updates", label: "الاعدادات", icon: Settings, hasDropdown: false, link: "/settings" },
   ]
 
