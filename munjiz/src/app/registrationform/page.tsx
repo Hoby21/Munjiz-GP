@@ -152,12 +152,14 @@ export default function VisitorRegistration() {
           </div>
 
           <div className="flex justify-end space-x-4">
+          <Link href="/wusool">
             <button
               type="submit"
               className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ml-4"
             >
               تسجيل الزائر
             </button>
+            </Link>
             <Link href="/wusool" className="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
               إلغاء
             </Link>
